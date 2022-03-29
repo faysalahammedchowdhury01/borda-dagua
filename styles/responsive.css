@@ -114,6 +114,11 @@
     font-size: 24px !important;
   }
 
+  /* header area */
+  .white-shape {
+    width: 80%;
+  }
+
   /* contact area */
   .contact-form .text p,
   .contact-form .text a,
