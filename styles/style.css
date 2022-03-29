@@ -259,3 +259,18 @@ img {
 .footer-links li a {
   font-weight: 900;
 }
+
+/* back to top */
+#back-to-top-btn {
+  padding: 10px 15px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9999999999 !important;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  background-color: #4292eb;
+}
