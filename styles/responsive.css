@@ -72,6 +72,10 @@
       url('../images/hero-bg.png');
   }
 
+  .logo img {
+    width: 180px;
+  }
+
   #hero-area .heading-sm {
     color: #ffffff !important;
   }

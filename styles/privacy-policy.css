@@ -1,0 +1,10 @@
+/* header area */
+.nav-item::after {
+  background: #ffffff;
+}
+
+/* privacy policy text area */
+#privacy-policy-text-area {
+  background-color: #4292eb;
+  padding: 100px 0;
+}
