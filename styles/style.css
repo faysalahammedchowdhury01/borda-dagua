@@ -4,6 +4,7 @@
 /* basic */
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden !important;
 }
 
 a,
@@ -24,6 +25,19 @@ img {
 /* reuseable */
 .text-sm {
   font-size: 14px;
+}
+
+.para-text {
+  font-size: 18px;
+}
+
+.section-heading {
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.heading-sm {
+  font-size: 30px;
 }
 
 .btn-success {
@@ -65,6 +79,62 @@ img {
 
 .nav-item:last-child::after {
   background: transparent;
+}
+
+.nav-link {
+  font-weight: 900;
+}
+
+#nav-icon {
+  width: 35px;
+  height: 30px;
+  position: relative;
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0vmin;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 12px;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 24px;
+}
+
+#nav-icon.open span:nth-child(1) {
+  top: 12px;
+  transform: rotate(135deg);
+}
+
+#nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon.open span:nth-child(3) {
+  top: 12px;
+  transform: rotate(-135deg);
 }
 
 /* hero area */
@@ -130,7 +200,9 @@ img {
 }
 
 .contact-form .text p,
-.contact-form .text a {
+.contact-form .text a,
+.info p,
+.info a {
   color: #e6e6e6 !important;
 }
 
@@ -182,4 +254,8 @@ img {
 .social-media a i:hover {
   background-color: #ffffff;
   color: #003a7c;
+}
+
+.footer-links li a {
+  font-weight: 900;
 }

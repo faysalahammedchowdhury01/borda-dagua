@@ -21,6 +21,7 @@
     <title>BORDA DAGUA</title>
     <!-- custom css and responsive css -->
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
     <!-- start header area here -->
@@ -28,46 +29,43 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <!-- logo -->
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Logo" />
+          <a class="navbar-brand logo" href="index.html">
+            <img class="d-none d-sm-block" src="images/logo.png" alt="Logo" />
+            <img
+              style="width: 180px"
+              class="d-sm-none"
+              src="images/logo-white.png"
+              alt="Logo"
+            />
           </a>
           <!-- mobile menu button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+          <button id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
           <!-- nav links -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div onclick="hideNav()" id="navbar-collapse" class="navbar-collapse">
+            <ul
+              onclick="stopPropagationFunc(event)"
+              class="navbar-nav ms-auto mb-2 mb-lg-0"
+            >
               <li class="nav-item position-relative">
                 <a
-                  class="nav-link active fw-bold"
+                  class="nav-link active"
                   aria-current="page"
                   href="javascript:void(0)"
                   >HOME</a
                 >
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link fw-bold" href="javascript:void(0)"
-                  >SOBRE NOS</a
-                >
+                <a class="nav-link" href="javascript:void(0)">SOBRE NOS</a>
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link fw-bold" href="javascript:void(0)"
-                  >SERVIÇOS</a
-                >
+                <a class="nav-link" href="javascript:void(0)">SERVIÇOS</a>
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link fw-bold" href="javascript:void(0)"
-                  >CONTACTOS</a
-                >
+                <a class="nav-link" href="javascript:void(0)">CONTACTOS</a>
               </li>
             </ul>
           </div>
@@ -80,14 +78,16 @@
     <section id="hero-area">
       <div class="container">
         <div class="position-relative content col-lg-6 text-center">
-          <h3 class="text-primary">Serviços de Limpeza na Zona de Lisboa</h3>
+          <h3 class="heading-sm text-primary">
+            Serviços de Limpeza na Zona de Lisboa
+          </h3>
           <button class="btn btn-success rounded-pill px-4 mt-3">
             Saber mais
           </button>
         </div>
       </div>
       <!-- white shape -->
-      <div class="white-shape">
+      <div class="white-shape d-none d-sm-block">
         <img src="images/white-shape.png" alt="white-shape" />
       </div>
     </section>
@@ -96,19 +96,19 @@
     <!-- start who we are area -->
     <section id="who-we-are-area" class="bg-primary py-5">
       <div class="container">
-        <div class="row g-5">
+        <div class="row gy-4 g-sm-5">
           <div class="col-lg-4">
             <img src="images/hand.png" alt="Hand" class="img-fluid" />
           </div>
           <div class="col-lg-8 text-white">
-            <h2 class="fw-bold h1">Quem Somos?</h2>
-            <p class="fw-normal mt-5 pt-4">
+            <h2 class="section-heading">Quem Somos?</h2>
+            <p class="para-text fw-normal mt-sm-5 pt-4">
               Oferecemos uma gama completa de serviços de limpeza para empresas
               e particulares na área da Grande Lisboa e margem sul na qual
               preservamos a qualidade dos nossos servi-lo com base em
               competências técnicas no ramo.
               <br /><br />
-              <br />
+              <br class="d-none d-sm-block" />
               A nossa empresa oferece um método de trabalho inovador, higiénico
               e efeciente no qual o nosso maior interesse é a satisfação dos
               nossos clientes.
@@ -123,7 +123,7 @@
     <section id="services-area" class="py-5">
       <div class="container">
         <div class="content position-relative">
-          <div class="row g-5">
+          <div class="row gy-4 g-sm-5">
             <div class="col-lg-4">
               <img
                 src="images/cleaning-image.png"
@@ -132,8 +132,8 @@
               />
             </div>
             <div class="col-lg-8">
-              <h2 class="fw-bold h1 text-primary">Serviços</h2>
-              <p class="fw-normal mt-5 pt-5">
+              <h2 class="section-heading text-primary">Serviços</h2>
+              <p class="para-text fw-normal mt-sm-5 pt-4 pt-sm-5">
                 O nosso método de trabalho na limpeza de chão consiste na
                 utilização de Mops tanto seco como molhado pois eles possuem a
                 capacidade de apanhar pó, pelos, cabelos, migalhas, etc melhor
@@ -150,78 +150,78 @@
           <div class="services row g-1 mt-5">
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas gerais</p>
+                <p class="mb-0 para-text">Limpezas gerais</p>
                 <img src="images/service-1.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de condomínios</p>
+                <p class="mb-0 para-text">Limpezas de condomínios</p>
                 <img src="images/service-2.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas pós obra</p>
+                <p class="mb-0 para-text">Limpezas pós obra</p>
                 <img src="images/service-3.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas domésticas</p>
+                <p class="mb-0 para-text">Limpezas domésticas</p>
                 <img src="images/service-4.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de escritório</p>
+                <p class="mb-0 para-text">Limpezas de escritório</p>
                 <img src="images/service-5.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de desinfecção</p>
+                <p class="mb-0 para-text">Limpezas de desinfecção</p>
                 <img src="images/service-6.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas exteriores</p>
+                <p class="mb-0 para-text">Limpezas exteriores</p>
                 <img src="images/service-7.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas industriais</p>
+                <p class="mb-0 para-text">Limpezas industriais</p>
                 <img src="images/service-8.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de vidros</p>
+                <p class="mb-0 para-text">Limpezas de vidros</p>
                 <img src="images/service-9.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de painéis solares</p>
+                <p class="mb-0 para-text">Limpezas de painéis solares</p>
                 <img src="images/service-10.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Limpezas de telhados e garagens</p>
+                <p class="mb-0 para-text">Limpezas de telhados e garagens</p>
                 <img src="images/service-11.png" alt="service" />
               </div>
             </div>
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
-                <p class="mb-0">Tratamento de pavimentos</p>
+                <p class="mb-0 para-text">Tratamento de pavimentos</p>
                 <img src="images/service-12.png" alt="service" />
               </div>
             </div>
           </div>
-          <div class="text-center mt-5 pt-4">
+          <div class="text-center mt-5 pt-sm-4">
             <button class="btn btn-success rounded-pill px-5 py-3">
               Pedir um Orçamento
             </button>
@@ -237,20 +237,22 @@
 
     <!-- start contact area here -->
     <section id="contact-area" class="pt-5 position-relative">
-      <div class="container-fluid px-5">
+      <div class="container-fluid px-3 px-sm-5">
         <div class="content position-relative">
           <div class="row justify-content-end">
-            <div class="col-lg-5">
-              <form class="contact-form p-4 text-white">
+            <div class="col-lg-6 col-xl-5">
+              <form class="contact-form p-5 p-sm-4 text-white">
                 <div class="row">
                   <div class="col-5">
                     <div
                       class="h-100 d-flex flex-column justify-content-between text"
                     >
                       <div class="col-12 h-50 d-flex align-items-center">
-                        <h3 class="fw-bold text-white">Contactos</h3>
+                        <h3 class="heading-sm fw-bold text-white mb-4 mb-sm-0">
+                          Contactos
+                        </h3>
                       </div>
-                      <div class="col-12">
+                      <div class="info col-12 d-none d-sm-block">
                         <p>
                           Pct. Bartolomeu Constatino 16 5º D 2810-032 Almada
                         </p>
@@ -259,6 +261,7 @@
                           <a href="mailto:geral@bordaagua.pt"
                             >geral@bordaagua.pt</a
                           >
+                          <br />
                           <a href="mailto:bruna@bordaagua.pt"
                             >bruna@bordaagua.pt</a
                           >
@@ -266,7 +269,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-7">
+                  <div class="col-sm-7">
                     <div class="row gy-4 inputs">
                       <div class="col-12">
                         <input type="text" placeholder="Name" />
@@ -281,6 +284,15 @@
                         <textarea placeholder="Questão / Mensagem"></textarea>
                       </div>
                     </div>
+                  </div>
+                  <div class="info col-12 d-sm-none mt-5">
+                    <p>Pct. Bartolomeu Constatino 16 5º D 2810-032 Almada</p>
+                    <p>+351 914 496 804</p>
+                    <p>
+                      <a href="mailto:geral@bordaagua.pt">geral@bordaagua.pt</a>
+                      <br />
+                      <a href="mailto:bruna@bordaagua.pt">bruna@bordaagua.pt</a>
+                    </p>
                   </div>
                 </div>
               </form>
@@ -298,12 +310,12 @@
     <!-- start footer area here -->
     <footer id="footer-area">
       <div class="container">
-        <div class="row align-items-end justify-content-between">
-          <div class="col-6">
-            <div class="d-flex align-items-center">
+        <div class="row g-4 align-items-end justify-content-between">
+          <div class="col-lg-6">
+            <div class="d-lg-flex align-items-center">
               <div class="text-center">
-                <a href="index.html"
-                  ><img src="images/logo.png" alt="Logo"
+                <a class="logo" href="index.html"
+                  ><img src="images/logo-white.png" alt="Logo"
                 /></a>
                 <p class="text-white mb-0 fw-light text-sm">
                   @2022 Borda D’Água
@@ -312,7 +324,7 @@
                   Todos os direitos reservados
                 </p>
               </div>
-              <div class="social-media ms-5 text-center">
+              <div class="social-media ms-lg-5 mt-4 mt-lg-0 text-center">
                 <div class="d-flex justify-content-center">
                   <a href="javascript:void(0)">
                     <i class="fab fa-facebook-f"></i>
@@ -327,25 +339,25 @@
               </div>
             </div>
           </div>
-          <div class="col-6 text-center">
-            <ul class="d-flex justify-content-center list-unstyled mb-0">
+          <div class="col-lg-6 text-center">
+            <ul
+              class="d-flex flex-wrap justify-content-center list-unstyled mb-0 footer-links"
+            >
               <li>
-                <a class="fw-bold text-white mx-3" href="javascript:void(0)"
-                  >HOME</a
-                >
+                <a class="text-white mx-3" href="javascript:void(0)">HOME</a>
               </li>
               <li>
-                <a class="fw-bold text-white mx-3" href="javascript:void(0)"
+                <a class="text-white mx-3" href="javascript:void(0)"
                   >SOBRE NOS</a
                 >
               </li>
               <li>
-                <a class="fw-bold text-white mx-3" href="javascript:void(0)"
+                <a class="text-white mx-3" href="javascript:void(0)"
                   >SERVIÇOS</a
                 >
               </li>
               <li>
-                <a class="fw-bold text-white mx-3" href="javascript:void(0)"
+                <a class="text-white mx-3" href="javascript:void(0)"
                   >CONTACTOS</a
                 >
               </li>
@@ -358,5 +370,8 @@
       </div>
     </footer>
     <!-- end footer area here -->
+
+    <!-- scripts -->
+    <script src="script/main.js"></script>
   </body>
 </html>

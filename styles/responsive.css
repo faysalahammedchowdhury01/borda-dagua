@@ -1,0 +1,125 @@
+/* responsive upto 1200px */
+@media (max-width: 1200px) {
+  /* hero area */
+  #hero-area {
+    background-size: cover;
+  }
+}
+
+/* responsive upto 991px */
+@media (max-width: 991px) {
+  /* header area */
+  .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.664);
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+  }
+
+  .navbar-collapse.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-collapse .navbar-nav {
+    background-color: #ffffff;
+    width: 250px;
+    max-width: 100%;
+    height: 100vh;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    padding: 20px;
+    transition: all 0.3s linear;
+    transform: translateX(-384px);
+  }
+
+  .navbar-collapse.open .navbar-nav {
+    transform: translateX(0);
+  }
+
+  .nav-item {
+    padding: 10px 0 !important;
+  }
+
+  .nav-item::after {
+    background-color: transparent;
+  }
+}
+
+/* responsive upto 575px */
+@media (max-width: 575px) {
+  /* reuseable */
+  .container {
+    padding: 0 20px !important;
+  }
+
+  .section-heading {
+    font-size: 40px;
+  }
+
+  .heading-sm {
+    font-size: 24px;
+  }
+
+  /* hero area */
+  #hero-area {
+    background: linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.363)),
+      url('../images/hero-bg.png');
+  }
+
+  #hero-area .heading-sm {
+    color: #ffffff !important;
+  }
+
+  /* contact area */
+  #contact-area .content {
+    padding-top: 0;
+  }
+}
+
+/* responsive for 1400px+ */
+@media (min-width: 1400px) {
+  /* reuseable */
+  .btn {
+    font-size: 22px !important;
+  }
+
+  .para-text {
+    font-size: 26px;
+  }
+
+  .section-heading {
+    font-size: 100px;
+  }
+
+  .heading-sm {
+    font-size: 40px;
+  }
+
+  /* header area */
+  .logo img {
+    width: 300px;
+  }
+
+  .nav-link {
+    font-size: 24px !important;
+  }
+
+  /* contact area */
+  .contact-form .text p,
+  .contact-form .text a,
+  .contact-form .inputs input,
+  .contact-form .inputs textarea {
+    font-size: 20px;
+  }
+
+  /* footer area */
+  .footer-links li a {
+    font-size: 24px;
+  }
+}
