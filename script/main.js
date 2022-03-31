@@ -30,7 +30,6 @@ navIcon.addEventListener('click', () => {
 
 // stop propagation func
 function stopPropagationFunc(e) {
-  console.log(e);
   e.stopPropagation();
 }
 
