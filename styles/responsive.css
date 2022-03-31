@@ -9,6 +9,10 @@
 /* responsive upto 991px */
 @media (max-width: 991px) {
   /* header area */
+  #header-area {
+    background-color: #ffffff;
+  }
+
   .navbar-collapse {
     position: absolute;
     top: 0;
@@ -80,9 +84,14 @@
     color: #ffffff !important;
   }
 
+  /* services area */
+  #services-area {
+    padding-bottom: 0;
+  }
+
   /* contact area */
   #contact-area .content {
-    padding-top: 0;
+    padding-top: 80px;
   }
 }
 
@@ -114,9 +123,10 @@
     font-size: 24px !important;
   }
 
-  /* header area */
-  .white-shape {
-    width: 80%;
+  /* hero area */
+  #hero-area {
+    padding: 350px 0;
+    background-size: cover;
   }
 
   /* contact area */

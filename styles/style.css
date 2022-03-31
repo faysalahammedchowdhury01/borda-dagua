@@ -47,11 +47,29 @@ img {
 
 /* header area */
 #header-area {
-  position: absolute;
+  position: fixed !important;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 99999999999999999 !important;
+  transition: all 0.2s linear;
+  border-bottom: 1px solid transparent;
+}
+
+.sticky #header-area {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+#header-area .container {
+  transition: all 0.2s linear;
+}
+
+.sticky #header-area .container {
+  transition: all 0.2s linear;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: 0 !important;
 }
 
 .nav-item {
@@ -103,7 +121,7 @@ img {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #ffffff;
+  background: #2081ef;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -156,11 +174,19 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  width: 85%;
+  width: 90%;
+}
+
+/* who we area area */
+#who-we-are-area {
+  padding-top: 180px;
+  padding-bottom: 120px;
 }
 
 /* services area */
 #services-area {
+  padding-top: 180px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -180,17 +206,28 @@ img {
   position: absolute;
   right: 0;
   top: -30px;
-  width: 400px;
+  width: 500px;
 }
 
 /* contact area */
 #contact-area .content {
-  background: url('../images//map.png');
-  background-size: 85%;
-  background-position: left;
-  background-repeat: no-repeat;
-  padding: 70px 0;
+  padding: 120px 0;
   z-index: 9999;
+  position: relative;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80% !important;
+  height: 100%;
+  border: 0;
+  padding: 10px;
+  padding-bottom: 0;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .contact-form {
@@ -198,6 +235,8 @@ img {
     0% no-repeat padding-box;
   box-shadow: 0px 5px 9px #00000029;
   border-radius: 10px 0px;
+  position: relative;
+  z-index: 999;
 }
 
 .contact-form .text p,
@@ -263,19 +302,4 @@ img {
 
 .footer-links li a {
   font-weight: 900;
-}
-
-/* back to top */
-#back-to-top-btn {
-  padding: 10px 15px;
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 9999999999 !important;
-  cursor: pointer;
-  border: 0;
-  background-color: transparent;
-  outline: 0;
-  background-color: #4292eb;
 }

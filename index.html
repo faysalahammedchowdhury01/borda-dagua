@@ -26,12 +26,11 @@
   <body>
     <!-- start header area here -->
     <header id="header-area">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg p-0">
         <div class="container py-4 border-bottom">
           <!-- logo -->
           <a class="navbar-brand logo" href="index.html">
-            <img class="d-none d-sm-block" src="images/logo.png" alt="Logo" />
-            <img class="d-sm-none" src="images/logo-white.png" alt="Logo" />
+            <img src="images/logo.png" alt="Logo" />
           </a>
           <!-- mobile menu button -->
           <button id="nav-icon" class="d-lg-none">
@@ -46,18 +45,28 @@
               class="navbar-nav ms-auto mb-2 mb-lg-0"
             >
               <li class="nav-item position-relative">
-                <a class="nav-link active" aria-current="page" href="#hero-area"
+                <a
+                  onclick="hideNav()"
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#hero-area"
                   >HOME</a
                 >
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link" href="#who-we-are-area">Sobre Nós</a>
+                <a onclick="hideNav()" class="nav-link" href="#who-we-are-area"
+                  >Sobre Nós</a
+                >
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link" href="#services-area">SERVIÇOS</a>
+                <a onclick="hideNav()" class="nav-link" href="#services-area"
+                  >SERVIÇOS</a
+                >
               </li>
               <li class="nav-item position-relative">
-                <a class="nav-link" href="#contact-area">CONTACTOS</a>
+                <a onclick="hideNav()" class="nav-link" href="#contact-area"
+                  >CONTACTOS</a
+                >
               </li>
             </ul>
           </div>
@@ -86,7 +95,7 @@
     <!-- end hero area here -->
 
     <!-- start who we are area -->
-    <section id="who-we-are-area" class="bg-primary py-5">
+    <section id="who-we-are-area" class="bg-primary">
       <div class="container">
         <div class="row gy-4 g-sm-5">
           <div class="col-lg-4">
@@ -112,7 +121,7 @@
     <!-- end who we are area -->
 
     <!-- start services area here -->
-    <section id="services-area" class="py-5">
+    <section id="services-area">
       <div class="container">
         <div class="content position-relative">
           <div class="row gy-4 g-sm-5">
@@ -232,6 +241,14 @@
       <div class="container-fluid px-3 px-sm-5">
         <div class="content position-relative">
           <div class="row justify-content-end">
+            <!-- map -->
+            <iframe
+              id="map"
+              class="d-none d-lg-block"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29390.828447314998!2d91.2190512!3d22.955619799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1648694271931!5m2!1sen!2sbd"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
             <div class="col-lg-6 col-xl-5">
               <form class="contact-form p-4 py-5 p-sm-4 text-white">
                 <div class="row">
@@ -356,11 +373,6 @@
       </div>
     </footer>
     <!-- end footer area here -->
-
-    <!-- back to top button -->
-    <button class="text-white rounded" id="back-to-top-btn" title="Go to top">
-      <i class="fa fa-arrow-up"></i>
-    </button>
 
     <!-- scripts -->
     <script src="script/main.js"></script>
