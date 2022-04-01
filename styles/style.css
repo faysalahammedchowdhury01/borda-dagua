@@ -61,7 +61,7 @@ img {
 }
 
 #header-area .logo img {
-  width: 180px;
+  width: 250px;
   transition: all 0.2s linear;
 }
 
@@ -169,7 +169,7 @@ img {
 #hero-area {
   background: url('../images/hero-bg.png');
   background-position: right;
-  background-size: 90%;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 280px 0;
   position: relative;
