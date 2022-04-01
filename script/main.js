@@ -47,3 +47,14 @@ function scrollFunction() {
     body.classList.remove('sticky');
   }
 }
+
+const links = document.querySelectorAll('.links li a');
+
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    const sectionId = link.getAttribute('data-href');
+    const section = document.querySelector(sectionId);
+    const position = section.offsetTop - 88;
+    window.scrollTo(0, position);
+  });
+});

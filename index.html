@@ -42,29 +42,42 @@
           <div onclick="hideNav()" id="navbar-collapse" class="navbar-collapse">
             <ul
               onclick="stopPropagationFunc(event)"
-              class="navbar-nav ms-auto mb-2 mb-lg-0"
+              class="navbar-nav ms-auto mb-2 mb-lg-0 links"
             >
               <li class="nav-item position-relative">
                 <a
                   onclick="hideNav()"
                   class="nav-link active"
                   aria-current="page"
-                  href="#hero-area"
+                  href="javascript:void(0)"
+                  data-href="#hero-area"
                   >HOME</a
                 >
               </li>
               <li class="nav-item position-relative">
-                <a onclick="hideNav()" class="nav-link" href="#who-we-are-area"
+                <a
+                  onclick="hideNav()"
+                  class="nav-link"
+                  href="javascript:void(0)"
+                  data-href="#who-we-are-area"
                   >Sobre Nós</a
                 >
               </li>
               <li class="nav-item position-relative">
-                <a onclick="hideNav()" class="nav-link" href="#services-area"
+                <a
+                  onclick="hideNav()"
+                  class="nav-link"
+                  href="javascript:void(0)"
+                  data-href="#services-area"
                   >SERVIÇOS</a
                 >
               </li>
               <li class="nav-item position-relative">
-                <a onclick="hideNav()" class="nav-link" href="#contact-area"
+                <a
+                  onclick="hideNav()"
+                  class="nav-link"
+                  href="javascript:void(0)"
+                  data-href="#contact-area"
                   >CONTACTOS</a
                 >
               </li>
@@ -103,7 +116,7 @@
           </div>
           <div class="col-lg-8 text-white">
             <h2 class="section-heading">Quem Somos?</h2>
-            <p class="para-text fw-normal mt-sm-5 pt-4">
+            <p class="para-text fw-normal mt-sm-5 pt-5">
               Oferecemos uma gama completa de serviços de limpeza para empresas
               e particulares na área da Grande Lisboa e margem sul na qual
               preservamos a qualidade dos nossos servi-lo com base em
@@ -134,6 +147,7 @@
             </div>
             <div class="col-lg-8">
               <h2 class="section-heading text-primary">Serviços</h2>
+              <br class="d-none d-sm-block" /><br class="d-none d-sm-block" />
               <p class="para-text fw-normal mt-sm-5 pt-4 pt-sm-5">
                 O nosso método de trabalho na limpeza de chão consiste na
                 utilização de Mops tanto seco como molhado pois eles possuem a
@@ -148,7 +162,7 @@
             </div>
           </div>
           <!-- services list -->
-          <div class="services row g-1 mt-5">
+          <div class="services row g-2 mt-5">
             <div class="col-md-6 text-center">
               <div class="service mx-auto">
                 <p class="mb-0 para-text">Limpezas gerais</p>
@@ -249,7 +263,7 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <div class="col-lg-6 col-xl-5">
+            <div class="col-lg-7 col-xl-6 col-xxl-5">
               <form class="contact-form p-4 py-5 p-sm-4 text-white">
                 <div class="row">
                   <div class="col-5">
@@ -279,7 +293,7 @@
                     </div>
                   </div>
                   <div class="col-sm-7">
-                    <div class="row gy-4 inputs">
+                    <div class="row gy-5 inputs">
                       <div class="col-12">
                         <input type="text" placeholder="Name" />
                       </div>
@@ -350,19 +364,39 @@
           </div>
           <div class="col-lg-6 text-center">
             <ul
-              class="d-flex flex-wrap justify-content-center list-unstyled mb-0 footer-links"
+              class="d-flex flex-wrap justify-content-center list-unstyled mb-0 footer-links links"
             >
               <li>
-                <a class="text-white mx-3" href="#hero-area">HOME</a>
+                <a
+                  class="text-white mx-3"
+                  href="javascript:void(0)"
+                  data-href="#hero-area"
+                  >HOME</a
+                >
               </li>
               <li>
-                <a class="text-white mx-3" href="#who-we-are-area">Sobre Nós</a>
+                <a
+                  class="text-white mx-3"
+                  href="javascript:void(0)"
+                  data-href="#who-we-are-area"
+                  >Sobre Nós</a
+                >
               </li>
               <li>
-                <a class="text-white mx-3" href="#services-area">SERVIÇOS</a>
+                <a
+                  class="text-white mx-3"
+                  href="javascript:void(0)"
+                  data-href="#services-area"
+                  >SERVIÇOS</a
+                >
               </li>
               <li>
-                <a class="text-white mx-3" href="#contact-area">CONTACTOS</a>
+                <a
+                  class="text-white mx-3"
+                  href="javascript:void(0)"
+                  data-href="#contact-area"
+                  >CONTACTOS</a
+                >
               </li>
             </ul>
             <p class="text-white fw-light mt-3 text-sm">
